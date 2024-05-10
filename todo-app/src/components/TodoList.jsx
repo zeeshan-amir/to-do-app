@@ -22,6 +22,7 @@ export const TodoList = ({ todos, deleteTodo, toggleTodo, setTodos }) => {
         placeholder="Search todo"
         onChange={(e) => searchTodo(e.target.value)}
       />
+
       {!todos.length ? (
         <Badge colorScheme="green" p="4" m="4" borderRadius="lg">
           No Todos

@@ -86,6 +86,7 @@ export const TodoFilters = ({ filterTodos }) => {
 
             <FormControl mt={4}>
               <FormLabel>Due Date</FormLabel>
+
               <SingleDatepicker
                 name="date-input"
                 date={new Date()}
@@ -99,9 +100,11 @@ export const TodoFilters = ({ filterTodos }) => {
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
+
             <Button colorScheme="blue" onClick={handleFilters}>
               Apply
             </Button>
+
             <Button colorScheme="gray" ml={3} onClick={clearFilters} isDisabled={!isFiltered}>
               Clear Filters
             </Button>

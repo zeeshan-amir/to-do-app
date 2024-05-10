@@ -86,7 +86,7 @@ export const AddTodoModal = ({ addTodo }) => {
                 variant="filled"
                 placeholder="Add new task"
                 value={todo.title}
-                maxlength="100"
+                maxLength="100"
                 onChange={(e) => {
                   setTodo({
                     ...todo,
@@ -142,4 +142,3 @@ export const AddTodoModal = ({ addTodo }) => {
     </>
   );
 };
-

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:8000'
+const BASE_URL = import.meta.env.VITE_APP_BASE_URL
 const TODO_ENDPOINT = "/api/todos";
 
 export const getTodos = () => {
