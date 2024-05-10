@@ -40,7 +40,6 @@ Here you can include a GIF or a set of screenshots demonstrating the application
 
 4. Migrate the database:
    ```bash
-   cd todo_project
    python3 manage.py makemigrations
    python3 manage.py migrate
    ```
@@ -64,7 +63,7 @@ Here you can include a GIF or a set of screenshots demonstrating the application
 
 3. Add the environment file:
    ```bash
-   Create .env
+   touch .env
    Add the VITE_APP_BASE_URL= 'http://localhost:8000' for development env
    ```
 
@@ -80,7 +79,6 @@ To run the test cases for both the backend and frontend:
 ### Backend Tests
 
 ```bash
-cd todo_project
 python manage.py test
 ```
 
