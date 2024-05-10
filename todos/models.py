@@ -27,4 +27,3 @@ class Todo(models.Model):
         Returns a string representation of the to-do item, which is its title.
         """
         return self.title
-

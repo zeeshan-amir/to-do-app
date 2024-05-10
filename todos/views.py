@@ -16,4 +16,3 @@ class TodoViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['completed', 'due_date', 'priority']
     search_fields = ['title']
-
