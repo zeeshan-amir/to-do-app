@@ -11,7 +11,7 @@ This project is an implementation of a Todo application using Django Rest Framew
     - /api/todos/
 - **Real-Time Updates**: Utilizes efficient communication between the frontend and backend to ensure state is synchronized across all clients.
 - **Github Actions**: Testing workflows for both backend and front end are being handled.
-- **Containerization**: Application is dockerized and docker-compose i being used for both django and react containers. 
+- **Containerization**: Application is dockerized and docker-compose is being used for both django and react containers. 
 
 ## Demo
 
@@ -46,7 +46,7 @@ Here you can include a GIF or a set of screenshots demonstrating the application
 
 5. Navigate back to the root:
    ```bash
-   cd..
+   cd ..
    ```
 
 6. Install dependencies & run the app:
