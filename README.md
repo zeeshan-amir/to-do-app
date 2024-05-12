@@ -61,4 +61,3 @@ Test cases for both django and react are added and ran before the build.
 ## Conclusion
 
 This README provides all necessary information to get the project set up locally, run tests, and understand the API.
-Collapse
