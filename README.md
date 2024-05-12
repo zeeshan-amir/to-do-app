@@ -33,23 +33,7 @@ Here you can include a GIF or a set of screenshots demonstrating the application
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. Navigate to the React application directory:
-   ```bash
-   cd todo-app
-   ```
-
-4. Add the environment file:
-   ```bash
-   touch .env
-   Add the VITE_APP_BASE_URL= 'http://localhost:8000' in env for development env
-   ```
-
-5. Navigate back to the root:
-   ```bash
-   cd ..
-   ```
-
-6. Install dependencies & run the app:
+3. Install dependencies & run the app:
    ```bash
    docker-compose up --build
    ```
@@ -57,6 +41,10 @@ Here you can include a GIF or a set of screenshots demonstrating the application
 ## Test Cases
 
 Test cases for both django and react are added and ran before the build.
+
+## Test Cases
+Visit the following url to access the application
+http://52.24.215.154:5173/
 
 ## Conclusion
 
