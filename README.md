@@ -11,6 +11,7 @@ This project is an implementation of a Todo application using Django Rest Framew
     - /api/todos/
 - **Real-Time Updates**: Utilizes efficient communication between the frontend and backend to ensure state is synchronized across all clients.
 - **Github Actions**: Testing workflows for both backend and front end are being handled.
+- **Containerization**: Application is dockerized and docker-compose i being used for both django and react containers. 
 
 ## Demo
 
@@ -19,8 +20,6 @@ Here you can include a GIF or a set of screenshots demonstrating the application
 
 
 ## Local Setup Guidelines
-
-### Backend Setup (Django)
 
 1. Clone the repository:
    ```bash
@@ -34,61 +33,30 @@ Here you can include a GIF or a set of screenshots demonstrating the application
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. Install dependencies:
-   ```bash
-   pip3 install -r requirements.txt
-   ```
-
-4. Migrate the database:
-   ```bash
-   python3 manage.py makemigrations
-   python3 manage.py migrate
-   ```
-
-5. Run the server:
-   ```bash
-   python3 manage.py runserver
-   ```
-
-### Frontend Setup (React)
-
-1. Navigate to the React application directory:
+3. Navigate to the React application directory:
    ```bash
    cd todo-app
    ```
 
-2. Install npm packages:
-   ```bash
-   npm install
-   ```
-
-3. Add the environment file:
+4. Add the environment file:
    ```bash
    touch .env
-   Add the VITE_APP_BASE_URL= 'http://localhost:8000' for development env
+   Add the VITE_APP_BASE_URL= 'http://localhost:8000' in env for development env
    ```
 
-4. Start the React development server:
+5. Navigate back to the root:
    ```bash
-   npm run dev
+   cd..
    ```
 
-## How to Run Test Cases
+6. Install dependencies & run the app:
+   ```bash
+   docker-compose up --build
+   ```
 
-To run the test cases for both the backend and frontend:
+## Test Cases
 
-### Backend Tests
-
-```bash
-python manage.py test
-```
-
-### Frontend Tests
-
-```bash
-cd todo-app
-npm run test
-```
+Test cases for both django and react are added and ran before the build.
 
 ## Conclusion
 
