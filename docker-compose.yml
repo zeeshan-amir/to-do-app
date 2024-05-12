@@ -2,41 +2,31 @@ version: '3.8'
 services:
   django:
     build: .
-    command: gunicorn todo_project.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - .:/app
-      - sqlite_data:/app/todo_project
+      - sqlite_data:/app
     ports:
       - "8000:8000"
     depends_on:
       - migrator
-
   migrator:
     build: .
     command: sh -c "python manage.py makemigrations && python manage.py migrate"
     volumes:
-      - .:/app
-      - sqlite_data:/app/todo_project
-
+      - sqlite_data:/app
   django_test:
     build: .
     command: python3 -u manage.py test
     volumes:
-      - .:/app
-      - sqlite_data:/app/todo_project
-
+      - sqlite_data:/app
   react:
     build: ./todo-app
     ports:
       - "5173:80"
     depends_on:
       - django
-
   react-tests:
     build: ./todo-app
     command: npm test
-    volumes:
       - ./todo-app:/app
-
 volumes:
   sqlite_data:
