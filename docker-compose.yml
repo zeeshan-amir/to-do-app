@@ -18,12 +18,25 @@ services:
       - .:/app
       - sqlite_data:/app/todo_project
 
+  django_test:
+    build: .
+    command: python3 -u manage.py test
+    volumes:
+      - .:/app
+      - sqlite_data:/app/todo_project
+
   react:
     build: ./todo-app
     ports:
       - "5173:80"
     depends_on:
       - django
+
+  react-tests:
+    build: ./todo-app
+    command: npm test
+    volumes:
+      - ./todo-app:/app
 
 volumes:
   sqlite_data:
