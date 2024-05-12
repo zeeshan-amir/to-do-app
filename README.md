@@ -10,6 +10,7 @@ This project is an implementation of a Todo application using Django Rest Framew
 - **API Endpoints**
     - /api/todos/
 - **Real-Time Updates**: Utilizes efficient communication between the frontend and backend to ensure state is synchronized across all clients.
+- **Github Actions**: Testing workflows for both backend and front end are being handled.
 
 ## Demo
 
