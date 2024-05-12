@@ -14,11 +14,14 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.3
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-    - name: Deploy to EC2
-      run: |
-        ssh -o "StrictHostKeyChecking=no" ec2-user@${{ secrets.ENF_POINT }} << 'EOF'
-          cd /to-do-app
+  
+    - name: Executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.END_POINT }}
+        username: ec2-user
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd to-do-app
           docker-compose down
           docker-compose up -d
-        EOF
